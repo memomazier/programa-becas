@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editar Perfil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            principal: "#F05024"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 fade-in">
+
+  <!-- Encabezado -->
+  <header class="bg-principal text-white p-4 shadow-md flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Editar Perfil</h1>
+    <a href="moodle.html" class="bg-white text-principal px-4 py-2 rounded hover:bg-gray-100 transition">
+      <i class="fas fa-arrow-left mr-2"></i>Regresar al Panel
+    </a>
+  </header>
+
+  <!-- Contenido -->
+  <main class="max-w-4xl mx-auto p-6 bg-white mt-10 rounded-2xl shadow-lg space-y-6 fade-in">
+
+    <div class="text-center">
+      <img src="https://i.pravatar.cc/120" alt="Foto de Perfil" class="mx-auto rounded-full w-32 h-32 border-4 border-principal shadow-md hover:scale-105 transition"/>
+      <div class="mt-4">
+        <label class="block font-medium text-gray-700 mb-1">Cambiar foto de perfil:</label>
+        <input type="file" class="block w-full border rounded p-2"/>
+      </div>
+    </div>
+
+    <form class="space-y-6">
+      <div>
+        <label class="block font-semibold text-gray-700 mb-1">Nombre completo</label>
+        <input type="text" placeholder="Tu nombre" class="w-full border rounded p-3 focus:outline-principal"/>
+      </div>
+
+      <div>
+        <label class="block font-semibold text-gray-700 mb-1">Correo electrónico</label>
+        <input type="email" placeholder="ejemplo@email.com" class="w-full border rounded p-3 focus:outline-principal"/>
+      </div>
+
+      <div>
+        <label class="block font-semibold text-gray-700 mb-1">Contraseña</label>
+        <input type="password" placeholder="••••••••" class="w-full border rounded p-3 focus:outline-principal"/>
+      </div>
+
+      <div>
+        <label class="block font-semibold text-gray-700 mb-1">Biografía</label>
+        <textarea rows="4" placeholder="Escribe algo sobre ti..." class="w-full border rounded p-3 focus:outline-principal"></textarea>
+      </div>
+
+      <div>
+        <label class="block font-semibold text-gray-700 mb-1">Teléfono</label>
+        <input type="tel" placeholder="Número de contacto" class="w-full border rounded p-3 focus:outline-principal"/>
+      </div>
+
+      <div>
+        <label class="block font-semibold text-gray-700 mb-1">Dirección</label>
+        <input type="text" placeholder="Tu dirección" class="w-full border rounded p-3 focus:outline-principal"/>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="bg-principal text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition shadow-md">
+          <i class="fas fa-save mr-2"></i>Guardar Cambios
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-principal text-white text-center p-4 mt-10">
+    &copy; 2025 Programa de Becas ASONOG
+  </footer>
+
+</body>
+</html>

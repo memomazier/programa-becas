@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel de Administración</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            principal: '#F05024'
+          },
+          animation: {
+            fade: 'fadeIn 1s ease-in-out',
+            pop: 'popUp 0.4s ease'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            },
+            popUp: {
+              '0%': { transform: 'scale(0.95)', opacity: 0 },
+              '100%': { transform: 'scale(1)', opacity: 1 }
+            }
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-principal text-white flex justify-between items-center p-4 shadow-lg">
+    <h1 class="text-2xl font-bold">Panel Administrativo</h1>
+    <div class="flex items-center gap-4">
+      <a href="adminlogin.html" class="bg-white text-principal px-4 py-1 rounded hover:bg-gray-100 transition">Cerrar sesión</a>
+      <a href="adminperfil.html">
+        <img src="https://i.pravatar.cc/40" alt="Perfil" class="rounded-full w-10 h-10 border-2 border-white hover:scale-110 transition-transform"/>
+      </a>
+    </div>
+  </header>
+
+  <!-- Contenido -->
+  <main class="p-8">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-3xl font-bold text-principal">Centro de Control</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 animate-fade">
+      <!-- Gestión de usuarios -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-[1.02] animate-pop">
+        <h3 class="text-xl font-semibold text-principal mb-3">Gestión de Usuarios</h3>
+        <p class="text-gray-600 mb-4">Crear, editar, eliminar usuarios y asignar roles.</p>
+        <a href="gestiondeusuarios.html" class="bg-principal text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Administrar</a>
+      </div>
+
+      <!-- Seguimiento de Becarios -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-[1.02] animate-pop">
+        <h3 class="text-xl font-semibold text-principal mb-3">Seguimiento Becarios</h3>
+        <p class="text-gray-600 mb-4">Visualizar avances, actividades y reportes.</p>
+        <a href="seguimientoactividades.html" class="bg-principal text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Ver Seguimiento</a>
+      </div>
+
+      <!-- Crear Actividades -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-[1.02] animate-pop">
+        <h3 class="text-xl font-semibold text-principal mb-3">Crear Actividades</h3>
+        <p class="text-gray-600 mb-4">Diseña tareas, asigna fechas y recursos.</p>
+        <a href="gestionactividades.html" class="bg-principal text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Crear</a>
+      </div>
+
+      <!-- Documentos y reportes -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-[1.02] animate-pop">
+        <h3 class="text-xl font-semibold text-principal mb-3">Documentos y Reportes</h3>
+        <p class="text-gray-600 mb-4">Generar informes, certificados y más.</p>
+        <a href="gestiondocumentos.html" class="bg-principal text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Generar</a>
+      </div>
+
+      <!-- Configuración general -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-[1.02] animate-pop">
+        <h3 class="text-xl font-semibold text-principal mb-3">Configuración General</h3>
+        <p class="text-gray-600 mb-4">Modificar parámetros del sistema y notificaciones.</p>
+        <a href="configuracion.html" class="bg-principal text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Configurar</a>
+      </div>
+
+      <!-- Estadísticas -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-[1.02] animate-pop">
+        <h3 class="text-xl font-semibold text-principal mb-3">Estadísticas</h3>
+        <p class="text-gray-600 mb-4">Analiza el rendimiento de becarios y admins.</p>
+        <a href="estadisticas.html" class="bg-principal text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Ver Gráficas</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer opcional -->
+  <footer class="text-center text-sm text-gray-500 mt-10 py-4">
+    &copy; 2025 Programa de Becas ASONOG. Todos los derechos reservados.
+  </footer>
+</body>
+</html>

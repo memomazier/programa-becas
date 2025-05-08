@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa de Becas Honduras</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .navbar {
+      background-color: #F05024;
+    }
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      z-index: 10;
+    }
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 50;
+    }
+    .quienes-somos {
+            background-color: #f5f5f5;
+            padding: 40px;
+            text-align: center;
+        }
+        .quienes-somos h2 {
+            color: #ff7f00;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .quienes-somos h3 {
+            color: #ff7f00;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .logros {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .logro {
+            align-items: center;
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 15px;
+        }
+        .logro img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+        }
+        .logro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* centra también el texto */
+ }
+
+        
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- NAVBAR -->
+ <nav class="bg-[#F05024] text-white px-8 py-5 shadow-md flex items-center justify-between sticky top-0 z-50 text-base md:text-lg">
+    <div class="flex items-center space-x-10">
+      <div class="relative group">
+        <button class="flex items-center gap-1 font-bold relative">
+            <a href="principal.html" class="font-bold relative group">
+          INICIO
+          </a>
+          <i class="fas fa-chevron-down text-sm transition-transform duration-300 group-hover:rotate-180"></i>
+          <span class="absolute bottom-[-5px] left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
+        </button>
+        <div class="absolute left-0 mt-2 bg-white text-[#F05024] rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 min-w-[180px] z-50">
+          <a href="sobrenosotros.html" class="block px-4 py-2 hover:bg-[#F05024] hover:text-white rounded-t-lg transition">Sobre Nosotros</a>
+          <a href="logros.html" class="block px-4 py-2 hover:bg-[#F05024] hover:text-white rounded-b-lg transition">Logros</a>
+        </div>
+      </div>
+      <a href="actividades.html" class="font-bold relative group">
+        ACTIVIDADES
+        <span class="absolute bottom-[-5px] left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="Historiasdeexito.html" class="font-bold relative group">
+        HISTORIAS DE ÉXITO
+        <span class="absolute bottom-[-5px] left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </div>
+    <div class="space-x-4">
+      <a href="#donar" class="bg-white text-[#F05024] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">DONAR</a>
+      <a href="ingresar.html" class="bg-white text-[#F05024] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">INGRESAR</a>
+      <button onclick="toggleDarkMode()" class="ml-4 p-2 rounded-full hover:bg-white/10 transition" title="Modo oscuro">
+        <i id="darkIcon" class="fas fa-moon toggle-icon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CARRUSEL -->
+  <div class="relative w-full h-[500px] text-center">
+    <div class="overlay-text">PRINCIPALES LOGROS DEL PROGRAMA DE BECAS</div>
+    <div class="swiper h-full">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="imagenes/carrusel1.jpg" class="w-full h-full object-cover" alt="Imagen 1"></div>
+        <div class="swiper-slide"><img src="imagenes/carrusel3.jpg" class="w-full h-full object-cover" alt="Imagen 2"></div>
+        <div class="swiper-slide"><img src="imagenes/carrusel4.jpeg" class="w-full h-full object-cover" alt="Imagen 3"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: { delay: 4000 },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+  </script>
+
+<section class="quienes-somos">
+    <h2>Principales logros e impactos</h2>
+
+    <div class="logros">
+        <div class="logro">
+            <img src="imagenes/iconoEgresadas.png" alt="Icono Graduados">
+            <p>Se han graduado 70 becarias y becarios de ciencias sociales, jurídicas, económicas, administrativas, humanidades y artes; ingenierías y ciencias médicas.</p>
+        </div>
+        <hr style="border: 1px solid #E47500; width: 100%;">
+        <div class="logro">
+            <img src="imagenes/iconoSalud.png" alt="Icono Salud">
+            <p>Fomento y acceso a la salud mental y el empoderamiento de lideresas y líderes comunitarios.</p>
+        </div>
+        <hr style="border: 1px solid #E47500; width: 100%;">
+        <div class="logro">
+            <img src="imagenes/iconoGraduación.png" alt="Icono Académico">
+            <p>Logros por grados académicos:</p>
+            <ul>
+                <li>2 doctorados</li>
+                <li>41 licenciaturas</li>
+                <li>25 maestrías</li>
+                <li>2 técnicos</li>
+            </ul>
+        </div>
+        <hr style="border: 1px solid #E47500; width: 100%;">
+        <div class="logro">
+            <img src="imagenes/iconoRed.png" alt="Icono Red">
+            <p>Constituida una red de ex becarias y ex becarios con el objetivo de conectar y construir cambios sostenibles.</p>
+        </div>
+        <hr style="border: 1px solid #E47500; width: 100%;">
+        <div class="logro">
+            <img src="imagenes/iconoIntercambio.png" alt="Icono Intercambio">
+            <p>Intercambio de conocimientos, experiencias y buenas prácticas entre las becarias y becarios.</p>
+        </div>
+        <hr style="border: 1px solid #E47500; width: 100%;">
+        <div class="logro">
+            <img src="imagenes/iconoDesigualdad.png" alt="Icono Desigualdad">
+            <p>Reducción de la desigualdad económica y social.</p>
+        </div>
+        <hr style="border: 1px solid #E47500; width: 100%;">
+        <div class="logro">
+            <img src="imagenes/iconoCondiciones.png" alt="Icono Condición">
+            <p>Mejora de las condiciones de vida de las comunidades de las becarias y becarios.</p>
+        </div>
+        <hr style="border: 1px solid #E47500; width: 100%;">
+        <div class="logro">
+            <img src="imagenes/iconoIgualdad.png" alt="Icono Igualdad">
+            <p>Espacios de incidencia en la defensa de los derechos humanos, cambio social, política, medio ambiente, género.</p>
+        </div>
+    </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#F05024] text-white text-center py-6 mt-10">
+    <p>&copy; 2025 Programa de Becas ASONOG. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Navbar scroll animation
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 10) {
+        navbar.classList.add('shadow-lg');
+      } else {
+        navbar.classList.remove('shadow-lg');
+      }
+    });
+  
+    // Modo oscuro
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      const icon = document.getElementById('darkIcon');
+      if (document.body.classList.contains('dark')) {
+        icon.classList.replace('fa-moon', 'fa-sun');
+      } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+      }
+    }
+  </script>
+</body>
+</html>

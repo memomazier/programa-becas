@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingreso Becario</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.8s ease-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white rounded-2xl shadow-lg p-10 max-w-xl w-full text-center animate-fade-in">
+    <div class="flex justify-center mb-4">
+      <i class="fas fa-user-graduate text-5xl text-[#F05024]"></i>
+    </div>
+    <h2 class="text-3xl font-bold text-[#F05024] mb-4">Bienvenido Becario</h2>
+    <p class="text-gray-600 mb-6">Accede a tu cuenta para subir documentos, ver tus actividades y seguir tu progreso.</p>
+
+    
+    <form id="loginForm" class="space-y-4">
+      <input id="usuario" type="text" placeholder="Usuario" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F05024]">
+      <input id="contrasena" type="password" placeholder="Contraseña" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F05024]">
+      <button type="submit" class="w-full bg-[#F05024] text-white font-bold py-2 rounded-lg hover:bg-[#d84315] transition duration-300">Ingresar</button>
+      <p id="error" class="text-red-500 text-sm mt-2 hidden">Usuario o contraseña incorrectos</p>
+    </form>
+    <div class="mt-4">
+      <a href="#" class="text-sm text-[#F05024] hover:underline">¿Olvidaste tu contraseña?</a>
+    </div>
+    <a href="ingresar.html" class="inline-block mt-6 px-5 py-2 border-2 border-[#F05024] text-[#F05024] rounded-full font-bold hover:bg-[#F05024] hover:text-white transition duration-300">
+      <i class="fas fa-arrow-left mr-2"></i>Volver
+    </a>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const user = document.getElementById('usuario').value.trim();
+      const pass = document.getElementById('contrasena').value.trim();
+      const error = document.getElementById('error');
+  
+      if (user === 'becario' && pass === 'becario') {
+        error.classList.add('hidden');
+        // Redirige directamente sin alert
+        window.location.href = 'moodle.html';
+      } else {
+        error.classList.remove('hidden');
+      }
+    });
+  </script>
+  
+  
+</body>
+</html>

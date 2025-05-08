@@ -1,0 +1,26 @@
+      <div class="w-full md:w-1/2 flex justify-center">
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_jcikwtux.json"  background="transparent"  speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+      </div>
+
+ (Imagen horizontal de la página de inicio)
+        <!-- SECCIÓN PROGRAMA DE BECAS -->
+ <section class="py-16 px-6 bg-white flex flex-col lg:flex-row items-center">
+  <div class="lg:w-1/2">
+    <h2 class="text-3xl text-center font-bold mb-4 text-[#F05024]">PROGRAMA DE BECAS</h2> 
+    <p class="mb-4 text-center text-lg lg:text-xl leading-relaxed">Nuestro programa de becas, se caracteriza por ser un proyecto innovador financiado por 
+       Pan Para el Mundo que atiende necesidades educativas mediante la transferencia 
+      directa de recursos económicos para que las personas beneficiarias puedan pagar los costos de sus estudios, así como formación complementaria en derechos humanos, género, cambio climático y migración, para contribuir a las transformaciones sociales, políticas y ecológicas.</p>
+
+    <!-- Texto convertido en botón funcional -->
+    <div class="flex justify-center">
+      <button onclick="window.location.href='becariologin.html'" class="mt-6 text-2xl font-bold text-white bg-[#F05024] px-6 py-3 rounded hover:bg-orange-600 transition duration-300 transform hover:scale-105">
+        Ingresa ya
+      </button>
+    </div>
+    
+  </div>
+
+  <div class="lg:w-1/2 mt-2 lg:mt-0">
+    <img src="imagenes/carrusel14.jpg" alt="Programa" class="rounded-lg shadow-lg">
+  </div>
+ </section>

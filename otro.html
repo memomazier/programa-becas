@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa de Becas Honduras</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .navbar {
+      background-color: #F05024;
+    }
+
+    /* Animación de fade-in */
+    .fade-in {
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Animación para los elementos al hacer scroll */
+    .slide-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    .slide-up-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .navbar-scroll {
+      transition: all 0.3s ease;
+    }
+
+    .navbar-scroll {
+      background-color: #c2410c !important;
+    }
+
+    /* Estilo para el modal */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 50;
+    }
+    .modal-content {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    /* Estilo para botones */
+    .btn-primary {
+      background-color: #4eaa03;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #3b8a02;
+    }
+
+    .btn-secondary {
+      background-color: #F05024;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: #e64317;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: #F05024;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    /* Alineación del botón INGRESAR */
+    .ingresar-btn-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- NAVBAR -->
+  <nav class="bg-[#F05024] text-white px-8 py-5 shadow-md flex items-center justify-between sticky top-0 z-50 text-base md:text-lg">
+    <div class="flex items-center space-x-10">
+      <div class="relative group">
+        <button class="flex items-center gap-1 font-bold relative">
+          <a href="principal.html" class="font-bold relative group">
+            INICIO
+          </a>
+          <i class="fas fa-chevron-down text-sm transition-transform duration-300 group-hover:rotate-180"></i>
+          <span class="absolute bottom-[-5px] left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
+        </button>
+        <div class="absolute left-0 mt-2 bg-white text-[#F05024] rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 min-w-[180px] z-50">
+          <a href="sobrenosotros.html" class="block px-4 py-2 hover:bg-[#F05024] hover:text-white rounded-t-lg transition">Sobre Nosotros</a>
+          <a href="logros.html" class="block px-4 py-2 hover:bg-[#F05024] hover:text-white rounded-b-lg transition">Logros</a>
+        </div>
+      </div>
+      <a href="actividades.html" class="font-bold relative group">
+        ACTIVIDADES
+        <span class="absolute bottom-[-5px] left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="Historiasdeexito.html" class="font-bold relative group">
+        HISTORIAS DE ÉXITO
+        <span class="absolute bottom-[-5px] left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </div>
+    <div class="space-x-4">
+      <a href="#donar" class="bg-white text-[#F05024] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">DONAR</a>
+      <a href="ingresar.html" class="bg-white text-[#F05024] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">INGRESAR</a>
+      <button onclick="toggleDarkMode()" class="ml-4 p-2 rounded-full hover:bg-white/10 transition" title="Modo oscuro">
+        <i id="darkIcon" class="fas fa-moon toggle-icon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CARRUSEL -->
+  <div class="relative w-full h-[500px] text-center">
+    <div class="overlay-text">PROGRAMA DE BECAS PARA JÓVENES DESFAVORECIDOS Y JÓVENES LIDERES DE HONDURAS</div>
+    <div class="swiper h-full">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="imagenes/carrusel1.jpg" class="w-full h-full object-cover" alt="Imagen 1"></div>
+        <div class="swiper-slide"><img src="imagenes/carrusel8.jpg" class="w-full h-full object-cover" alt="Imagen 2"></div>
+        <div class="swiper-slide"><img src="imagenes/carrusel10.jpg" class="w-full h-full object-cover" alt="Imagen 3"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: { delay: 4000 },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+  </script>
+
+  <!-- SECCIÓN PROGRAMA DE BECAS -->
+  <section class="py-16 px-6 bg-white flex flex-col lg:flex-row items-center fade-in">
+    <div class="lg:w-1/2">
+      <h2 class="text-3xl font-bold mb-4 text-[#F05024]">PROGRAMA DE BECAS</h2> 
+      <p class="mb-4">Nuestro programa de becas, se caracteriza por ser un proyecto innovador financiado por 
+        Brot Für Die Welt (Pan Para el Mundo) que atiende necesidades educativas mediante la transferencia 
+        directa de recursos económicos para que las personas beneficiarias puedan pagar los costos de sus estudios.</p>
+
+      <div class="ingresar-btn-container">
+        <h2 class="text-2xl font-bold mb-4 text-[#000000]">¿Eres becaria o becario? ¡Ingresa ahora!</h2>
+        <button class="btn-primary">INGRESAR</button>
+      </div>
+    </div>
+    <div class="lg:w-1/2 mt-8 lg:mt-0">
+      <img src="imagenes/carrusel3.jpg" alt="Programa" class="rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
+    </div>
+  </section>
+
+  <!-- Población Meta -->
+  <section class="py-16 px-6 bg-gray-100 fade-in">
+    <div class="section-title">Población Meta</div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="slide-up">
+        <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+          <h3 class="text-xl font-bold text-[#F05024]">Jóvenes entre 15 y 25 años</h3>
+          <p>Jóvenes que residen en sectores vulnerables con alta probabilidad de continuar su formación en áreas claves.</p>
+        </div>
+      </div>
+      <div class="slide-up">
+        <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+          <h3 class="text-xl font-bold text-[#F05024]">Estudiantes Universitarios</h3>
+          <p>Los estudiantes de diferentes universidades que tienen el compromiso de seguir con sus estudios superiores.</p>
+        </div>
+      </div>
+      <div class="slide-up">
+        <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+          <h3 class="text-xl font-bold text-[#F05024]">Líderes comunitarios</h3>
+          <p>Individuos con liderazgo en sus comunidades, demostrando compromiso con la educación y desarrollo local.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONACIÓN -->
+  <section id="donar" class="py-16 px-6 bg-[#F05024] text-white">
+    <div class="text-center mb-8">
+      <h2 class="text-4xl font-bold">¡Haz tu aporte hoy!</h2>
+      <p class="text-lg mt-4">Tu ayuda puede cambiar vidas. Dona hoy y haz parte de este proyecto transformador.</p>
+    </div>
+    <div class="text-center">
+      <a href="donaciones.html" class="btn-secondary">DONAR AHORA</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#F05024] text-white py-8">
+    <div class="text-center">
+      <p>&copy; 2025 Programa de Becas ASONOG. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Animación para los elementos al hacer scroll
+    const elements = document.querySelectorAll('.slide-up');
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      elements.forEach(element => {
+        if (element.offsetTop < scrollPosition) {
+          element.classList.add('slide-up-visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

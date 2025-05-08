@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estadísticas</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .bg-principal {
+      background-color: #F05024;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navbar superior -->
+  <header class="bg-principal text-white flex justify-between items-center p-4 shadow-md">
+    <h1 class="text-xl font-bold">Estadísticas</h1>
+    <div class="flex items-center gap-4">
+      <button class="bg-white text-principal px-4 py-1 rounded hover:bg-gray-100 transition">Cerrar sesión</button>
+      <a href="perfil.html">
+        <img src="https://i.pravatar.cc/40" alt="Perfil" class="rounded-full w-10 h-10 border-2 border-white hover:scale-110 transition-transform"/>
+      </a>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="p-8">
+    <div class="flex justify-between items-center mb-8">
+      <a href="admin_dashboard.html" class="bg-principal text-white px-4 py-2 rounded hover:bg-orange-700 transition">Volver al Panel Admin</a>
+    </div>
+
+    <section class="space-y-8">
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-[#F05024] mb-4">Estadísticas Generales</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold text-[#F05024]">Total de Becarios</h3>
+            <p class="text-3xl font-bold text-center">250</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold text-[#F05024]">Actividades Completadas</h3>
+            <p class="text-3xl font-bold text-center">180</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold text-[#F05024]">Total de Donaciones</h3>
+            <p class="text-3xl font-bold text-center">$50,000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
