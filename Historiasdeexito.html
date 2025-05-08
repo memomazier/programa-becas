@@ -70,7 +70,7 @@
     <div class="flex items-center space-x-10">
       <div class="relative group">
         <button class="flex items-center gap-1 font-bold relative">
-            <a href="principal.html" class="font-bold relative group">
+            <a href="index.html" class="font-bold relative group">
           INICIO
           </a>
           <i class="fas fa-chevron-down text-sm transition-transform duration-300 group-hover:rotate-180"></i>
@@ -105,17 +105,17 @@
     <div class="swiper mySwiper h-full">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="imagenes/carrusel1.jpg" class="w-full h-96 object-cover">
+          <img src="imagenes/carrusel1.jpg" class="w-full h-full object-cover blur-sm brightness-75">
         </div>
         <div class="swiper-slide">
-          <img src="imagenes/carrusel3.jpg" class="w-full h-96 object-cover">
+          <img src="imagenes/carrusel3.jpg" class="w-full h-full object-cover blur-sm brightness-75">
         </div>
         <div class="swiper-slide">
-          <img src="imagenes/carrusel5.jpg" class="w-full h-96 object-cover">
+          <img src="imagenes/carrusel7.jpeg" class="w-full h-full object-cover blur-sm brightness-75">
         </div>
       </div>
     </div>
-    <div class="overlay-text">HISTORIAS DE ÉXITO</div>
+    <div class="overlay-text text-4xl">HISTORIAS DE ÉXITO</div>
   </div>
   <script>
     new Swiper(".mySwiper", {
@@ -129,7 +129,7 @@
  <section class="max-w-7xl mx-auto px-4 py-12">
   <h2 class="text-3xl font-bold text-center mb-2 text-[#F05024]">Historias de Éxito</h2>
   <p class="text-center text-gray-700 mb-10">
-    Conoce los testimonios y experiencias reales de jóvenes que han transformado sus vidas gracias al Programa de Becas ASONOG.
+    Conoce los testimonios y experiencias reales de jóvenes que han transformado sus vidas gracias al Programa de Becas.
   </p>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -151,7 +151,23 @@
       </div>
     </div>
 
-    <!-- Agrega más videos aquí si deseas -->
+    <!-- Video 3 -->
+    <div class="bg-white shadow-lg rounded-lg p-4">
+      <h3 class="text-xl font-semibold text-[#F05024] mb-2 text-center">Conoce la historia de éxito de Maria Angela Gutierrez.</h3>
+      <p class="text-gray-700 mb-4">Egresada de la carrera de Derecho y exbecaria del “Programa de Becas para Jóvenes Desfavorecidos y Jóvenes Lideres en Honduras". 👏</p>
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FASONOG%2Fvideos%2F505916501827181%2F&show_text=false&width=560&t=0" width="100%" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      </div>
+    </div>
+
+    <!-- Video 4 -->
+    <div class="bg-white shadow-lg rounded-lg p-4">
+      <h3 class="text-xl font-semibold text-[#F05024] mb-2 text-center">Descubre la inspiradora historia de éxito de Gerson Zambrano.</h3>
+      <p class="text-gray-700 mb-4">Gerson es uno de nuestros ex becarios del "Programa de Becas para Jóvenes Desfavorecidos y Jóvenes Líderes en Honduras", postulado por nuestra coparte ADEPES.👏</p>
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FASONOG%2Fvideos%2F2201572206859774%2F&show_text=false&width=560&t=0" width="100%" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      </div>
+    </div>
   </div>
  </section>
 
@@ -201,13 +217,68 @@
   </script>
 
   <!-- FOOTER -->
-  <footer class="bg-[#F05024] text-white py-6 mt-16">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-center md:text-left">&copy; 2025 Programa de Becas ASONOG. Todos los derechos reservados.</p>
-      <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="#" class="hover:underline">Política de privacidad</a>
-        <a href="#" class="hover:underline">Términos de uso</a>
+  <footer class="bg-[#F05024] text-white py-12 mt-16">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+      
+      <!-- Logo e introducción -->
+      <div>
+        <img src="imagenes/logoasonog.png" alt="Logo ASONOG" class="h-16 mb-4">
+        <p class="text-sm leading-relaxed">
+          El Programa de Becas ASONOG apoya a jóvenes líderes y desfavorecidos en Honduras, brindándoles acceso a educación, oportunidades y un futuro mejor.
+        </p>
       </div>
+      
+      <!-- Información de contacto -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contáctanos</h3>
+        <p class="text-sm mb-2">
+          <i class="fas fa-map-marker-alt mr-2"></i>Dirección: ASONOG, Barrio El Calvario, Santa Rosa de Copán, Honduras.
+        </p>
+        <p class="text-sm mb-2">
+          <i class="fas fa-phone mr-2"></i>Teléfono: +504 3249-3440
+        </p>
+        <p class="text-sm mb-2">
+          <i class="fas fa-envelope mr-2"></i>Email: karolina.lara@asonog.hn
+        </p>
+        <p class="text-sm mb-2">
+          <i class="fas fa-envelope mr-2"></i>Email: direccion@asonog.hn
+        </p>
+        <p class="text-sm">
+          <i class="fas fa-globe mr-2"></i>
+          <a href="https://asonog.hn" class="underline hover:text-gray-200">www.asonog.hn</a>
+        </p>
+      </div>
+      
+  
+      <!-- Enlaces útiles -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Enlaces útiles</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Política de privacidad</a></li>
+          <li><a href="#" class="hover:underline">Términos de uso</a></li>
+          <li><a href="#" class="hover:underline">Preguntas frecuentes</a></li>
+          <li><a href="#" class="hover:underline">Contáctanos</a></li>
+        </ul>
+      </div>
+  
+      <!-- Redes sociales -->
+      <div>
+        <h3 class="text-mg font-semibold mb-4">Síguenos en nuestras redes sociales:</h3>
+        <div class="flex flex-wrap gap-4 text-white text-2xl">
+          <a href="https://www.facebook.com/ASONOG" aria-label="Facebook" class="hover:text-gray-200"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/asonog_honduras/" aria-label="Instagram" class="hover:text-gray-200"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/AsonogOficial" aria-label="Twitter" class="hover:text-gray-200"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/asonog/" aria-label="LinkedIn" class="hover:text-gray-200"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.tiktok.com/@asonog" aria-label="TikTok" class="hover:text-gray-200"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.youtube.com/@asonog8695" aria-label="YouTube" class="hover:text-gray-200"><i class="fab fa-youtube"></i></a>
+          <a href="https://open.spotify.com/show/6WZ4EBVvxoRgtfxbaNbyEP?si=19546effe2bc469b" aria-label="Spotify" class="hover:text-gray-200"><i class="fab fa-spotify"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Línea inferior -->
+    <div class="border-t border-white/30 mt-10 pt-6 text-center text-sm">
+      &copy; 2025 Programa de Becas ASONOG. Todos los derechos reservados.
     </div>
   </footer>
   

@@ -70,7 +70,7 @@
     <div class="flex items-center space-x-10">
       <div class="relative group">
         <button class="flex items-center gap-1 font-bold relative">
-            <a href="principal.html" class="font-bold relative group">
+            <a href="index.html" class="font-bold relative group">
           INICIO
           </a>
           <i class="fas fa-chevron-down text-sm transition-transform duration-300 group-hover:rotate-180"></i>
@@ -104,17 +104,17 @@
     <div class="swiper mySwiper h-full">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="imagenes/carrusel1.jpg" class="w-full h-96 object-cover">
+          <img src="imagenes/carrusel1.jpg" class="w-full h-full object-cover blur-sm brightness-75">
         </div>
         <div class="swiper-slide">
-          <img src="imagenes/carrusel11.jpg" class="w-full h-96 object-cover">
+          <img src="imagenes/carrusel11.jpg" class="w-full h-full object-cover blur-sm brightness-75">
         </div>
         <div class="swiper-slide">
-          <img src="imagenes/carrusel4.jpeg" class="w-full h-96 object-cover">
+          <img src="imagenes/carrusel4.jpeg" class="w-full h-full object-cover blur-sm brightness-75">
         </div>
       </div>
     </div>
-    <div class="overlay-text">SOBRE NOSOTROS</div>
+    <div class="overlay-text text-4xl">SOBRE NOSOTROS</div>
   </div>
 
   <script>
@@ -155,13 +155,68 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-[#F05024] text-white py-6 mt-16">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-center md:text-left">&copy; 2025 Programa de Becas ASONOG. Todos los derechos reservados.</p>
-      <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="#" class="hover:underline">Política de privacidad</a>
-        <a href="#" class="hover:underline">Términos de uso</a>
+  <footer class="bg-[#F05024] text-white py-12 mt-16">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+      
+      <!-- Logo e introducción -->
+      <div>
+        <img src="imagenes/logoasonog.png" alt="Logo ASONOG" class="h-16 mb-4">
+        <p class="text-sm leading-relaxed">
+          El Programa de Becas ASONOG apoya a jóvenes líderes y desfavorecidos en Honduras, brindándoles acceso a educación, oportunidades y un futuro mejor.
+        </p>
       </div>
+      
+      <!-- Información de contacto -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contáctanos</h3>
+        <p class="text-sm mb-2">
+          <i class="fas fa-map-marker-alt mr-2"></i>Dirección: ASONOG, Barrio El Calvario, Santa Rosa de Copán, Honduras.
+        </p>
+        <p class="text-sm mb-2">
+          <i class="fas fa-phone mr-2"></i>Teléfono: +504 3249-3440
+        </p>
+        <p class="text-sm mb-2">
+          <i class="fas fa-envelope mr-2"></i>Email: karolina.lara@asonog.hn
+        </p>
+        <p class="text-sm mb-2">
+          <i class="fas fa-envelope mr-2"></i>Email: direccion@asonog.hn
+        </p>
+        <p class="text-sm">
+          <i class="fas fa-globe mr-2"></i>
+          <a href="https://asonog.hn" class="underline hover:text-gray-200">www.asonog.hn</a>
+        </p>
+      </div>
+      
+  
+      <!-- Enlaces útiles -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Enlaces útiles</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Política de privacidad</a></li>
+          <li><a href="#" class="hover:underline">Términos de uso</a></li>
+          <li><a href="#" class="hover:underline">Preguntas frecuentes</a></li>
+          <li><a href="#" class="hover:underline">Contáctanos</a></li>
+        </ul>
+      </div>
+  
+      <!-- Redes sociales -->
+      <div>
+        <h3 class="text-mg font-semibold mb-4">Síguenos en nuestras redes sociales:</h3>
+        <div class="flex flex-wrap gap-4 text-white text-2xl">
+          <a href="https://www.facebook.com/ASONOG" aria-label="Facebook" class="hover:text-gray-200"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/asonog_honduras/" aria-label="Instagram" class="hover:text-gray-200"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/AsonogOficial" aria-label="Twitter" class="hover:text-gray-200"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/asonog/" aria-label="LinkedIn" class="hover:text-gray-200"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.tiktok.com/@asonog" aria-label="TikTok" class="hover:text-gray-200"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.youtube.com/@asonog8695" aria-label="YouTube" class="hover:text-gray-200"><i class="fab fa-youtube"></i></a>
+          <a href="https://open.spotify.com/show/6WZ4EBVvxoRgtfxbaNbyEP?si=19546effe2bc469b" aria-label="Spotify" class="hover:text-gray-200"><i class="fab fa-spotify"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Línea inferior -->
+    <div class="border-t border-white/30 mt-10 pt-6 text-center text-sm">
+      &copy; 2025 Programa de Becas ASONOG. Todos los derechos reservados.
     </div>
   </footer>
 
