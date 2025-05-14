@@ -192,9 +192,9 @@
     <div class="overlay-text text-4xl ">PROGRAMA DE BECAS PARA JÓVENES DESFAVORECIDOS Y JÓVENES LIDERES DE HONDURAS</div>
     <div class="swiper h-full">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="imagenes/carrusel1.jpg" class="w-full h-full object-cover blur-sm brightness-75" alt="Imagen 1"></div>
-        <div class="swiper-slide"><img src="imagenes/carrusel8.jpg" class="w-full h-full object-cover blur-sm brightness-75" alt="Imagen 2"></div>
-        <div class="swiper-slide"><img src="imagenes/carrusel10.jpg" class="w-full h-full object-cover blur-sm brightness-75" alt="Imagen 3"></div>
+        <div class="swiper-slide"><img src="imagenes/carrusel3.jpg" class="w-full h-full object-cover blur-sm brightness-75" alt="Imagen 3"></div>
+        <div class="swiper-slide"><img src="imagenes/carrusel15.jpg" class="w-full h-full object-cover blur-sm brightness-75" alt="Imagen 15"></div>
+        <div class="swiper-slide"><img src="imagenes/carrusel4.jpeg" class="w-full h-full object-cover blur-sm brightness-75" alt="Imagen 4"></div>
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
@@ -216,14 +216,15 @@
     <h2 class="text-3xl text-center font-bold mb-4 text-[#F05024]">PROGRAMA DE BECAS</h2> 
     <p class="mb-4 text-center text-lg lg:text-xl leading-relaxed">Nuestro programa de becas, se caracteriza por ser un proyecto innovador financiado por 
        Pan Para el Mundo que atiende necesidades educativas mediante la transferencia 
-      directa de recursos económicos para que las personas beneficiarias puedan pagar los costos de sus estudios, así como formación complementaria en derechos humanos, género, cambio climático y migración, para contribuir a las transformaciones sociales, políticas y ecológicas.</p>
+      directa de recursos económicos para que las personas beneficiarias puedan pagar los costos de sus estudios, así como recibir formación complementaria en derechos humanos, género, cambio climático y migración, para contribuir a las transformaciones sociales, políticas y ecológicas.</p>
 
-    <!-- Texto convertido en botón funcional -->
-    <div class="flex justify-center">
-      <button onclick="window.location.href='becariologin.html'" class="mt-6 text-2xl font-bold text-white bg-[#F05024] px-6 py-3 rounded hover:bg-orange-600 transition duration-300 transform hover:scale-105">
-        Ingresa ya
-      </button>
-    </div>
+    <!-- Texto y botón en línea -->
+ <div class="flex items-center justify-center mt-6 space-x-4">
+  <p class="text-xl font-semibold">¿Eres becaria o becario?</p>
+  <button onclick="window.location.href='becariologin.html'" class="text-lg font-bold text-white bg-[#F05024] px-5 py-2 rounded hover:bg-orange-600 transition duration-300 transform hover:scale-105">
+    Ingresa ya
+  </button>
+ </div>
     
   </div>
 
@@ -302,65 +303,67 @@
       </div>
     </section>
 
-  <!-- OBJETIVOS DE DESARROLLO SOSTENIBLE -->
-  <section class="py-16 px-6 bg-gray-100 text-center">
-    <h2 class="text-2xl font-bold text-[#F05024] mb-10">LA APUESTA ES CONTRIBUIR A LOS SIGUIENTES OBJETIVOS DE DESARROLLO SOSTENIBLE:</h2>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-      <div class="bg-white p-4 rounded shadow transition cursor-pointer" onclick="mostrarODS('Erradicar la pobreza en todas sus formas en todo el mundo.')">
-        <img src="imagenes/ods1banner.png" alt="Objetivo 1" class="w-30 h-30 mx-auto mb-2">
-        <p>ODS 1: Fin de la Pobreza</p>
-      </div>
-      <div class="bg-white p-4 rounded shadow transition cursor-pointer" onclick="mostrarODS('Garantizar una vida sana y promover el bienestar para todos en todas las edades.')">
-        <img src="imagenes/ods3banner.jpg" alt="Objetivo 2" class="w-30 h-30 mx-auto mb-2">
-        <p>ODS 3: Salud y Bienestar</p>
-      </div>
-      <div class="bg-white p-4 rounded shadow transition cursor-pointer" onclick="mostrarODS('Garantizar una educación inclusiva, equitativa y de calidad.')">
-        <img src="imagenes/ods4banner.jpg" alt="Objetivo 3" class="w-30 h-30 mx-auto mb-2">
-        <p>ODS 4: Educación de Calidad</p>
-      </div>
-      <div class="bg-white p-4 rounded shadow transition cursor-pointer" onclick="mostrarODS('Lograr la igualdad entre los géneros y empoderar a todas las mujeres y niñas.')">
-        <img src="imagenes/ods5banner.jpeg" alt="Objetivo 4" class="w-30 h-30 mx-auto mb-2">
-        <p>ODS 5: Igualdad de Género</p>
-      </div>
-      <div class="bg-white p-4 rounded shadow transition cursor-pointer" onclick="mostrarODS('Tomar medidas urgentes para combatir el cambio climático y sus efectos.')">
-        <img src="imagenes/ods13banner.png" alt="Objetivo 5" class="w-30 h-30 mx-auto mb-2">
-        <p>ODS 13: Acción por el Clima</p>
-      </div>
-      <div class="bg-white p-4 rounded shadow transition cursor-pointer" onclick="mostrarODS('Promover sociedades pacíficas e inclusivas para el desarrollo sostenible.')">
-        <img src="imagenes/ods16banner.png" alt="Objetivo 6" class="w-30 h-30 mx-auto mb-2">
-        <p>ODS 16: Paz, Justicia e Instituciones Sólidas</p>
-      </div>
-    </div>
-  </section>
+  <!-- SECCIÓN ODS: Solo imágenes cuadradas con animación -->
+ <section class="py-16 px-6 bg-gray-100 text-center">
+  <h2 class="text-2xl font-bold text-[#F05024] mb-10">LA APUESTA ES CONTRIBUIR A LOS SIGUIENTES OBJETIVOS DE DESARROLLO SOSTENIBLE:</h2>
 
-  <!-- MODAL ODS -->
-  <div id="modalODS" class="modal hidden">
-    <div class="bg-white p-6 rounded-lg shadow-xl max-w-md relative">
-      <button onclick="cerrarODS()" class="absolute top-2 right-2 text-red-600 font-bold text-xl">&times;</button>
-      <div id="contenidoODS"></div>
-    </div>
+  <div class="flex flex-wrap justify-center gap-6">
+    <img src="imagenes/ODS1.png" alt="ODS 1" class="w-24 h-24 object-cover rounded cursor-pointer transform transition duration-300 hover:scale-110"
+         onclick="mostrarODS('imagenes/ods1banner.png', 'Erradicar la pobreza en todas sus formas en todo el mundo.')">
+
+    <img src="imagenes/ODS3.jpg" alt="ODS 3" class="w-24 h-24 object-cover rounded cursor-pointer transform transition duration-300 hover:scale-110"
+         onclick="mostrarODS('imagenes/ods3banner.jpg', 'Garantizar una vida sana y promover el bienestar para todos en todas las edades.')">
+
+    <img src="imagenes/ODS4.svg" alt="ODS 4" class="w-24 h-24 object-cover rounded cursor-pointer transform transition duration-300 hover:scale-110"
+         onclick="mostrarODS('imagenes/ods4banner.jpg', 'Garantizar una educación inclusiva, equitativa y de calidad.')">
+
+    <img src="imagenes/ODS5.jpg" alt="ODS 5" class="w-24 h-24 object-cover rounded cursor-pointer transform transition duration-300 hover:scale-110"
+         onclick="mostrarODS('imagenes/ods5banner.jpeg', 'Lograr la igualdad entre los géneros y empoderar a todas las mujeres y niñas.')">
+
+    <img src="imagenes/ODS13.jpg" alt="ODS 13" class="w-24 h-24 object-cover rounded cursor-pointer transform transition duration-300 hover:scale-110"
+         onclick="mostrarODS('imagenes/ods13banner.png', 'Tomar medidas urgentes para combatir el cambio climático y sus efectos.')">
+
+    <img src="imagenes/ODS16.jpg" alt="ODS 16" class="w-24 h-24 object-cover rounded cursor-pointer transform transition duration-300 hover:scale-110"
+         onclick="mostrarODS('imagenes/ods16banner.png', 'Promover sociedades pacíficas e inclusivas para el desarrollo sostenible.')">
   </div>
-  <script>
-    function mostrarODS(texto) {
-      document.getElementById('contenidoODS').innerHTML = `<p>${texto}</p>`;
-      document.getElementById('modalODS').classList.remove('hidden');
-    }
-    function cerrarODS() {
-      document.getElementById('modalODS').classList.add('hidden');
-    }
-  </script>
+ </section>
+
+
+ <!-- MODAL ODS -->
+ <div id="modalODS" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white p-6 rounded-lg shadow-xl max-w-md relative">
+    <button onclick="cerrarODS()" class="absolute top-2 right-2 text-red-600 font-bold text-xl">&times;</button>
+    <img id="imgODS" src="" alt="Banner ODS" class="mb-4 rounded">
+    <div id="contenidoODS" class="text-gray-700 text-base leading-relaxed"></div>
+  </div>
+ </div>
+
+ <script>
+  function mostrarODS(imagen, texto) {
+    document.getElementById('imgODS').src = imagen;
+    document.getElementById('contenidoODS').innerHTML = `<p>${texto}</p>`;
+    document.getElementById('modalODS').classList.remove('hidden');
+  }
+  function cerrarODS() {
+    document.getElementById('modalODS').classList.add('hidden');
+  }
+ </script>
+
+
+
 
   <!-- FOOTER -->
   <footer class="bg-[#F05024] text-white py-12 mt-16">
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
       
-      <!-- Logo e introducción -->
-      <div>
-        <img src="imagenes/logoasonog.png" alt="Logo ASONOG" class="h-16 mb-4">
-        <p class="text-sm leading-relaxed">
-          El Programa de Becas ASONOG apoya a jóvenes líderes y desfavorecidos en Honduras, brindándoles acceso a educación, oportunidades y un futuro mejor.
-        </p>
-      </div>
+      <!-- Logo e introducción con imagen más grande y mejor separación -->
+        <div class="flex items-start">
+          <img src="imagenes/logoasonog.png" alt="Logo ASONOG" class="h-24 mr-2"> <!-- Imagen más grande y separada -->
+          <p class="text-sm leading-relaxed">
+            El Programa de Becas ASONOG apoya a jóvenes líderes y desfavorecidos en Honduras, brindándoles acceso a educación, oportunidades y un futuro mejor.
+          </p>
+        </div>
+
       
       <!-- Información de contacto -->
       <div>
