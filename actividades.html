@@ -90,7 +90,7 @@
       </a>
     </div>
     <div class="space-x-4">
-      <a href="#donar" class="bg-white text-[#F05024] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">DONAR</a>
+      <a href="donaciones.html" class="bg-white text-[#F05024] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">DONAR</a>
       <a href="ingresar.html" class="bg-white text-[#F05024] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">INGRESAR</a>
       <button onclick="toggleDarkMode()" class="ml-4 p-2 rounded-full hover:bg-white/10 transition" title="Modo oscuro">
         <i id="darkIcon" class="fas fa-moon toggle-icon"></i>
@@ -98,32 +98,42 @@
     </div>
   </nav>
   <!-- Aquí se insertará el mismo navbar ya trabajado con modo oscuro y animaciones -->
+  <!-- CARRUSEL SOBRE NOSOTROS -->
+ <div class="relative w-full h-96">
+  <!-- Texto fijo en la parte inferior -->
+  <div class="absolute bottom-6 w-full text-center z-10">
+    <div class="text-white font-extrabold text-4xl px-4 py-2 inline-block rounded-lg bg-gray-700 bg-opacity-50 shadow-lg drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      ACTIVIDADES
+    </div>
+  </div>
 
-  <!-- CARRUSEL DE ACTIVIDADES -->
-  <div class="relative w-full h-96">
+  <!-- Carrusel de imágenes -->
+  <div class="relative w-full h-full">
     <div class="swiper mySwiper h-full">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="imagenes/carrusel22.jpg" class="w-full h-full object-cover blur-sm brightness-75">
+          <img src="imagenes/carrusel22.jpg" class="w-full h-full object-cover">
         </div>
         <div class="swiper-slide">
-          <img src="imagenes/carrusel12.jpg" class="w-full h-full object-cover blur-sm brightness-75">
+          <img src="imagenes/carrusel12.jpg" class="w-full h-full object-cover">
         </div>
         <div class="swiper-slide">
-          <img src="imagenes/carrusel10.jpg" class="w-full h-full object-cover blur-sm brightness-75">
+          <img src="imagenes/carrusel10.jpg" class="w-full h-full object-cover">
         </div>
       </div>
     </div>
-    <div class="overlay-text text-4xl">ACTIVIDADES</div>
   </div>
-  <script>
-    new Swiper(".mySwiper", {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-      },
-    });
-  </script>
+ </div>
+
+ <script>
+  new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+  });
+ </script>
+
 
   <section class="py-20 px-6 max-w-7xl mx-auto">
   <h2 class="text-3xl font-bold text-[#F05024] text-center mb-10">Galería de Actividades</h2>
@@ -150,7 +160,7 @@
  <section class="py-16 bg-white dark:bg-gray-900 px-4 text-center">
     <h2 class="text-3xl font-bold text-[#F05024] dark:text-white mb-6">Descarga nuestro folleto informativo</h2>
     <p class="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-6">Conoce a detalle nuestras actividades, logros y proyecciones futuras en este documento exclusivo para estudiantes, voluntarios y aliados.</p>
-    <a href="documentos/folleto-actividades.pdf" download class="inline-flex items-center bg-[#F05024] hover:bg-[#e1411b] text-white font-bold px-6 py-3 rounded-full shadow-lg transition-transform transform hover:scale-105">
+    <a href="Documentos/Revista Informativa de Becas.pdf" download class="inline-flex items-center bg-[#F05024] hover:bg-[#e1411b] text-white font-bold px-6 py-3 rounded-full shadow-lg transition-transform transform hover:scale-105">
       <i class="fas fa-file-download mr-2 animate-bounce"></i> Descargar PDF
     </a>
   </section>

@@ -91,7 +91,7 @@
       </a>
     </div>
     <div class="space-x-4">
-      <a href="#donar" class="bg-white text-[#F05024] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">DONAR</a>
+      <a href="donaciones.html" class="bg-white text-[#F05024] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">DONAR</a>
       <a href="ingresar.html" class="bg-white text-[#F05024] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">INGRESAR</a>
       <button onclick="toggleDarkMode()" class="ml-4 p-2 rounded-full hover:bg-white/10 transition" title="Modo oscuro">
         <i id="darkIcon" class="fas fa-moon toggle-icon"></i>
@@ -100,25 +100,37 @@
   </nav>
   
 
-  <!-- CARRUSEL HISTORIAS DE ÉXITO -->
-  <div class="relative w-full h-96">
+  <!-- CARRUSEL -->
+     <!-- CARRUSEL SOBRE NOSOTROS -->
+ <div class="relative w-full h-96">
+  <!-- Texto fijo en la parte inferior -->
+  <div class="absolute bottom-6 w-full text-center z-10">
+    <div class="text-white font-extrabold text-4xl px-4 py-2 inline-block rounded-lg bg-gray-700 bg-opacity-50 shadow-lg drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      HISTORIAS DE ÉXITO
+    </div>
+  </div>
+
+  <!-- Carrusel de imágenes -->
+  <div class="relative w-full h-full">
     <div class="swiper mySwiper h-full">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="imagenes/carrusel21.jpg" class="w-full h-full object-cover blur-sm brightness-75">
+          <img src="imagenes/carrusel21.jpg" class="w-full h-full object-cover">
         </div>
       </div>
     </div>
-    <div class="overlay-text text-4xl">HISTORIAS DE ÉXITO</div>
   </div>
-  <script>
-    new Swiper(".mySwiper", {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-      },
-    });
-  </script>
+ </div>
+
+ <script>
+  new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+  });
+ </script>
+
 
  <section class="max-w-7xl mx-auto px-4 py-12">
   <h2 class="text-3xl font-bold text-center mb-2 text-[#F05024]">Historias de Éxito</h2>
