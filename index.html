@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programa de Becas Honduras</title>
+  <title>Unidad de Becas ASONOG</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -14,9 +14,7 @@
     body {
       font-family: 'Montserrat', sans-serif;
     }
-    .navbar {
-      background-color: #F05024;
-    }
+ 
     .overlay-text {
       position: absolute;
       top: 50%;
@@ -49,10 +47,6 @@
     background-color: #2d3748;
   }
 
-  .dark .text-[F05024] {
-    color: #F05024;
-  }
-
   .dark .bg-gray-50 {
     background-color: #4a5568;
   }
@@ -60,10 +54,6 @@
   .dark .text-gray-700,
   .dark .text-gray-600 {
     color: #e2e8f0;
-  }
-
-  .dark .navbar-scroll {
-    background-color: #c2410c !important;
   }
 
   .navbar-scroll {
@@ -88,10 +78,6 @@
 
     .navbar-scroll {
       transition: all 0.3s ease;
-    }
-
-    .navbar-scroll {
-      background-color: #c2410c !important;
     }
 
     /* Estilo para el modal */
@@ -126,7 +112,7 @@
     }
 
     .btn-primary:hover {
-      background-color: #b45b13;
+      background-color: #002F6C;
     }
 
     .btn-secondary {
@@ -135,16 +121,17 @@
       border-radius: 25px;
       font-weight: bold;
       transition: background-color 0.3s ease;
-      color: #F05024;
+      color: #002F6C;
     }
 
     .btn-secondary:hover {
-      background-color: #ffc5b7;
+      background-color: #002F6C;
+      color: #ffffff;
     }
 
     .section-title {
       font-size: 2rem;
-      color: #F05024;
+      color: #002F6C;
       font-weight: bold;
       text-align: center;
       margin-bottom: 40px;
@@ -154,7 +141,7 @@
 <body class="bg-gray-100">
 
  <!-- NAVBAR -->
- <nav class="bg-[#F05024] text-white px-8 py-5 shadow-md flex items-center justify-between sticky top-0 z-50 text-base md:text-lg">
+ <nav class="bg-[#002F6C] text-white px-8 py-5 shadow-md flex items-center justify-between sticky top-0 z-50 text-base md:text-lg">
     <div class="flex items-center space-x-10">
       <div class="relative group">
         <button class="flex items-center gap-1 font-bold relative">
@@ -164,8 +151,8 @@
           <i class="fas fa-chevron-down text-sm transition-transform duration-300 group-hover:rotate-180"></i>
           <span class="absolute bottom-[-5px] left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
         </button>
-        <div class="absolute left-0 mt-2 bg-white text-[#F05024] rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 min-w-[180px] z-50">
-          <a href="sobrenosotros.html" class="block px-4 py-2 hover:bg-[#F05024] hover:text-white rounded-t-lg transition">Sobre Nosotros</a>
+        <div class="absolute left-0 mt-2 bg-white text-[#002F6C] rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 min-w-[180px] z-50">
+          <a href="sobrenosotros.html" class="block px-4 py-2 hover:bg-[#002F6C] hover:text-white rounded-t-lg transition">Sobre Nosotros</a>
           <a href="logros.html" class="block px-4 py-2 hover:bg-[#F05024] hover:text-white rounded-b-lg transition">Logros</a>
         </div>
       </div>
@@ -179,8 +166,8 @@
       </a>
     </div>
     <div class="space-x-4">
-      <a href="donaciones.html" class="bg-white text-[#F05024] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">DONAR</a>
-      <a href="ingresar.html" class="bg-white text-[#F05024] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">INGRESAR</a>
+      <a href="donaciones.html" class="bg-white text-[#002F6C] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">DONAR</a>
+      <a href="ingresar.html" class="bg-white text-[#002F6C] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">INGRESAR</a>
       <button onclick="toggleDarkMode()" class="ml-4 p-2 rounded-full hover:bg-white/10 transition" title="Modo oscuro">
         <i id="darkIcon" class="fas fa-moon toggle-icon"></i>
       </button>
@@ -192,7 +179,7 @@
   <!-- TEXTO FIJO EN LA PARTE INFERIOR -->
   <div class="absolute bottom-6 w-full text-center z-10">
     <div class="text-white font-extrabold text-4xl px-4 py-2 inline-block rounded-lg bg-gray-700 bg-opacity-50 shadow-lg drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
-      PROGRAMA DE BECAS HONDURAS
+      UNIDAD DE BECAS ASONOG
     </div>
   </div>
 
@@ -231,15 +218,14 @@
   <!-- SECCIÓN PROGRAMA DE BECAS -->
  <section class="py-16 px-6 bg-white flex flex-col lg:flex-row items-center">
   <div class="lg:w-1/2">
-    <h2 class="text-3xl text-center font-bold mb-4 text-[#F05024]">PROGRAMA DE BECAS</h2> 
-    <p class="mb-4 text-center text-lg lg:text-xl leading-relaxed">Nuestro programa de becas, se caracteriza por ser un proyecto innovador financiado por 
-       Pan Para el Mundo que atiende necesidades educativas mediante la transferencia 
-      directa de recursos económicos para que las personas beneficiarias puedan pagar los costos de sus estudios, así como recibir formación complementaria en derechos humanos, género, cambio climático y migración, para contribuir a las transformaciones sociales, políticas y ecológicas.</p>
+    <h2 class="text-3xl text-center font-bold mb-4 text-[#002F6C]">UNIDAD DE BECAS ASONOG</h2> 
+    <p class="mb-4 text-center text-lg lg:text-xl leading-relaxed">El programa de becas de ASONOG es un proyecto innovador, que atiende necesidades educativas mediante la transferencia directa de recursos económicos 
+      para que las personas beneficiarias puedan pagar los costos de sus estudios, así como recibir formación complementaria en derechos humanos, género, cambio climático y migración, para contribuir a las transformaciones sociales, políticas y ecológicas.</p>
 
     <!-- Texto y botón en línea -->
  <div class="flex items-center justify-center mt-6 space-x-4">
   <p class="text-xl font-semibold">¿Eres becaria o becario?</p>
-  <button onclick="window.location.href='becariologin.html'" class="text-lg font-bold text-white bg-[#F05024] px-5 py-2 rounded hover:bg-orange-600 transition duration-300 transform hover:scale-105">
+  <button onclick="window.location.href='becariologin.html'" class="text-lg font-bold text-white bg-[#002F6C] px-5 py-2 rounded hover:bg-blue-600 transition duration-300 transform hover:scale-105">
     Ingresa ya
   </button>
  </div>
@@ -255,7 +241,7 @@
 
     <!-- NUESTRA POBLACIÓN META -->
     <section class="py-16 px-6 bg-gray-100">
-      <h2 class="text-2xl font-bold text-[#F05024] mb-10 text-center">Grupo Meta</h2>
+      <h2 class="text-2xl font-bold text-[#002F6C] mb-10 text-center">Grupo Meta</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         <div class="bg-white p-6 rounded-lg shadow text-center font-bold">
           <img src="imagenes/checkmorado.png" alt="Población 1" class="w-8 h-8 mx-auto mb-4">
@@ -286,10 +272,6 @@
           <p>Personas con discapacidad</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow text-center font-bold">
-          <img src="imagenes/checkmorado.png" alt="Población 8" class="w-8 h-8 mx-auto mb-4">
-          <p>Personas LGTBIQ+</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center font-bold">
           <img src="imagenes/checkmorado.png" alt="Población 9" class="w-8 h-8 mx-auto mb-4">
           <p>Otros</p>
         </div>
@@ -299,22 +281,20 @@
 
   <!-- MAPA -->
   <section class="py-16 px-6 bg-gray-100 text-center">
-    <h2 class="text-2xl font-bold text-[#F05024] mb-4">PRESENCIA DEL PROGRAMA DE BECAS</h2>
+    <h2 class="text-2xl font-bold text-[#002F6C] mb-4">PRESENCIA DEL PROGRAMA DE BECAS</h2>
     <div class="w-full max-w-2x1 mx-auto aspect-video">
-      <iframe src="https://datawrapper.dwcdn.net/1AOsH/5/" class="w-full h-full border-0" allowfullscreen loading="lazy"></iframe>
+      <iframe src="https://datawrapper.dwcdn.net/1AOsH/6/" class="w-full h-full border-0" allowfullscreen loading="lazy"></iframe>
     </div>
   </section>
 
     <!-- DONACIÓN -->
-    <section id="donar" class="py-16 px-6 bg-[#F05024] text-white">
+    <section id="donar" class="py-16 px-6 bg-[#002F6C] text-white">
       <div class="text-center mb-8">
         <h2 class="text-4xl font-bold mb-6">¡Apoya nuestra causa!</h2>
-        <p class="mb-6 text-center text-lg lg:text-xl leading-relaxed">El programa de becas ha diseñado una estrategia de sostenibilidad la cual consistió en hacer
-          un mapeo estratégico de donantes y aliados nacionales e internacionales. Esto, se ha logrado gracias al apoyo de las
-          Agencias de Cooperación que se han sumado y han sido parte de este proceso de desarrollo, a ellos y a tosos los que son
-          parte de este esfuerzo. También se hace la invitación para que más agencias de cooperación internacional, empresas con
-          Responsabilidad Social Empresarial y personas comprometidas con la educación, contribuyan con recursos, ideas y acciones
-          para construir una sociedad más justa y equitativa.</p>
+        <p class="mb-6 text-center text-lg lg:text-xl leading-relaxed">Juntos podemos transformar vidas a través de la educación. 
+          Cada aporte, ya sea en recursos, ideas o acciones, tiene el poder de abrir puertas y crear oportunidades para quienes más 
+          lo necesitan. ¡Unamos esfuerzos y hagamos de esta iniciativa un ejemplo de solidaridad y esperanza! Tu participación es clave 
+          para construir un mundo donde la educación sea un derecho accesible para todas y todos.</p>
       </div>
       <div class="text-center">
         <a href="donaciones.html" class="btn-secondary">DONAR AHORA</a>
@@ -323,7 +303,7 @@
 
   <!-- SECCIÓN ODS: Solo imágenes cuadradas con animación -->
  <section class="py-16 px-6 bg-gray-100 text-center">
-  <h2 class="text-2xl font-bold text-[#F05024] mb-10">LA APUESTA ES CONTRIBUIR A LOS SIGUIENTES OBJETIVOS DE DESARROLLO SOSTENIBLE:</h2>
+  <h2 class="text-2xl font-bold text-[#002F6C] mb-10">LA APUESTA ES CONTRIBUIR A LOS SIGUIENTES OBJETIVOS DE DESARROLLO SOSTENIBLE:</h2>
 
   <div class="flex flex-wrap justify-center gap-6">
     <img src="imagenes/ODS1.png" alt="ODS 1" class="w-24 h-24 object-cover rounded cursor-pointer transform transition duration-300 hover:scale-110"
@@ -371,7 +351,7 @@
 
 
   <!-- FOOTER -->
-   <footer class="bg-[#F05024] text-white py-12 mt-16">
+   <footer class="bg-[#002F6C] text-white py-12 mt-16">
   <div class="max-w-7xl mx-auto px-2 grid grid-cols-1 md:grid-cols-[auto_1fr_1fr_1fr] gap-10 items-start">
     
     <!-- Logo completamente a la izquierda -->
@@ -382,7 +362,7 @@
     <!-- Introducción -->
     <div class="flex flex-col justify-start">
       <p class="text-sm leading-relaxed">
-        El Programa de Becas ASONOG apoya a jóvenes líderes y desfavorecidos en Honduras, brindándoles acceso a educación, oportunidades y un futuro mejor.
+        El Programa de Becas ASONOG apoya a jóvenes agentes de cambio en Honduras, brindándoles acceso a educación, oportunidades y un futuro mejor.
       </p>
     </div>
 

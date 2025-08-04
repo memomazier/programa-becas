@@ -15,7 +15,7 @@
       font-family: 'Montserrat', sans-serif;
     }
     .navbar {
-      background-color: #F05024;
+      background-color: #002F6C;
     }
     .overlay-text {
       position: absolute;
@@ -46,12 +46,12 @@
             text-align: center;
         }
         .quienes-somos h2 {
-            color: #ff7f00;
+            color: #002F6C;
             font-size: 24px;
             font-weight: bold;
         }
         .quienes-somos h3 {
-            color: #ff7f00;
+            color: #002F6C;
             font-size: 20px;
             margin-top: 20px;
         }
@@ -85,7 +85,7 @@
 <body class="bg-gray-100">
 
   <!-- NAVBAR -->
- <nav class="bg-[#F05024] text-white px-8 py-5 shadow-md flex items-center justify-between sticky top-0 z-50 text-base md:text-lg">
+ <nav class="bg-[#002F6C] text-white px-8 py-5 shadow-md flex items-center justify-between sticky top-0 z-50 text-base md:text-lg">
     <div class="flex items-center space-x-10">
       <div class="relative group">
         <button class="flex items-center gap-1 font-bold relative">
@@ -95,9 +95,9 @@
           <i class="fas fa-chevron-down text-sm transition-transform duration-300 group-hover:rotate-180"></i>
           <span class="absolute bottom-[-5px] left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
         </button>
-        <div class="absolute left-0 mt-2 bg-white text-[#F05024] rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 min-w-[180px] z-50">
-          <a href="sobrenosotros.html" class="block px-4 py-2 hover:bg-[#F05024] hover:text-white rounded-t-lg transition">Sobre Nosotros</a>
-          <a href="logros.html" class="block px-4 py-2 hover:bg-[#F05024] hover:text-white rounded-b-lg transition">Logros</a>
+        <div class="absolute left-0 mt-2 bg-white text-[#002F6C] rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 min-w-[180px] z-50">
+          <a href="sobrenosotros.html" class="block px-4 py-2 hover:bg-[#002F6C] hover:text-white rounded-t-lg transition">Sobre Nosotros</a>
+          <a href="logros.html" class="block px-4 py-2 hover:bg-[#002F6C] hover:text-white rounded-b-lg transition">Logros</a>
         </div>
       </div>
       <a href="actividades.html" class="font-bold relative group">
@@ -110,8 +110,8 @@
       </a>
     </div>
     <div class="space-x-4">
-      <a href="donaciones.html" class="bg-white text-[#F05024] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">DONAR</a>
-      <a href="ingresar.html" class="bg-white text-[#F05024] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">INGRESAR</a>
+      <a href="donaciones.html" class="bg-white text-[#002F6C] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">DONAR</a>
+      <a href="ingresar.html" class="bg-white text-[#002F6C] px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition duration-300">INGRESAR</a>
       <button onclick="toggleDarkMode()" class="ml-4 p-2 rounded-full hover:bg-white/10 transition" title="Modo oscuro">
         <i id="darkIcon" class="fas fa-moon toggle-icon"></i>
       </button>
@@ -157,59 +157,51 @@
 
 
  <!-- PRINCIPALES LOGROS E IMPACTOS -->
- <section class="pt-16 pb-0 bg-white">
-  <h2 class="text-3xl font-bold text-center text-[#F05024] mb-12">Principales logros e impactos</h2>
+<section class="pt-16 pb-0 bg-white">
+  <h2 class="text-3xl font-bold text-center text-[#002F6C] mb-12">Principales logros e impactos</h2>
 
-  <!-- Primera fila -->
-  <div class="grid md:grid-cols-2 gap-12 items-start mb-16">
-  <!-- Columna izquierda (3 logros) -->
-  <div class="space-y-12 animate-fade-up" data-aos="fade-right">
-    <div class="text-center">
-      <img src="imagenes/iconoGraduación.png" alt="Graduados" class="w-14 h-14 mx-auto mb-4">
-      <p class="text-gray-700 text-sm">Se han graduado 85 becarias y becarios de ciencias sociales, jurídicas, económicas, administrativas, humanidades y artes; ingenierías y ciencias médicas.</p>
-      <hr class="mt-6 border-t-2 border-[#E47500] w-2/3 mx-auto">
+  <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto px-4">
+    <!-- Columna izquierda (3 logros) -->
+    <div class="space-y-12 animate-fade-up" data-aos="fade-right">
+      <div class="text-center">
+        <img src="imagenes/iconoSalud.png" alt="Salud" class="w-14 h-14 mx-auto mb-4">
+        <p class="text-gray-700 text-sm">Fomento y acceso a la salud mental y el empoderamiento de lideresas y líderes comunitarios.</p>
+        <hr class="mt-6 border-t-2 border-[#002F6C] w-2/3 mx-auto">
+      </div>
+      <div class="text-center">
+        <img src="imagenes/iconoIntercambio.png" alt="Intercambio" class="w-14 h-14 mx-auto mb-4">
+        <p class="text-gray-700 text-sm">Intercambio de conocimientos, experiencias y buenas prácticas entre las becarias y becarios.</p>
+        <hr class="mt-6 border-t-2 border-[#002F6C] w-2/3 mx-auto">
+      </div>
+      <div class="text-center">
+        <img src="imagenes/iconoDesigualdad.png" alt="Desigualdad" class="w-14 h-14 mx-auto mb-4">
+        <p class="text-gray-700 text-sm">Reducción de la desigualdad económica y social.</p>
+        <hr class="mt-6 border-t-2 border-[#002F6C] w-2/3 mx-auto">
+      </div>
     </div>
-    <div class="text-center">
-      <img src="imagenes/iconoSalud.png" alt="Salud" class="w-14 h-14 mx-auto mb-4">
-      <p class="text-gray-700 text-sm">Fomento y acceso a la salud mental y el empoderamiento de lideresas y líderes comunitarios.</p>
-      <hr class="mt-6 border-t-2 border-[#E47500] w-2/3 mx-auto">
-    </div>
-    <div class="text-center">
-      <img src="imagenes/iconoRed.png" alt="Red" class="w-14 h-14 mx-auto mb-4">
-      <p class="text-gray-700 text-sm">Constituida una red de ex becarias y ex becarios con el objetivo de conectar y construir cambios sostenibles.</p>
-      <hr class="mt-6 border-t-2 border-[#E47500] w-2/3 mx-auto">
+
+    <!-- Columna derecha (2 logros) -->
+    <div class="space-y-12 animate-fade-up" data-aos="fade-left">
+      <div class="text-center">
+        <img src="imagenes/iconoCondiciones.png" alt="Condiciones" class="w-14 h-14 mx-auto mb-4">
+        <p class="text-gray-700 text-sm">Mejora de las condiciones de vida de las comunidades de las becarias y becarios.</p>
+        <hr class="mt-6 border-t-2 border-[#002F6C] w-2/3 mx-auto">
+      </div>
+      <div class="text-center">
+        <img src="imagenes/iconoIgualdad.png" alt="Igualdad" class="w-14 h-14 mx-auto mb-4">
+        <p class="text-gray-700 text-sm">Espacios de incidencia en la defensa de los derechos humanos, cambio social, política, medio ambiente, género.</p>
+        <hr class="mt-6 border-t-2 border-[#002F6C] w-2/3 mx-auto">
+      </div>
     </div>
   </div>
-
-  <!-- Columna derecha (4 logros) -->
-  <div class="space-y-12 animate-fade-up" data-aos="fade-left">
-    <div class="text-center">
-      <img src="imagenes/iconoIntercambio.png" alt="Intercambio" class="w-14 h-14 mx-auto mb-4">
-      <p class="text-gray-700 text-sm">Intercambio de conocimientos, experiencias y buenas prácticas entre las becarias y becarios.</p>
-      <hr class="mt-6 border-t-2 border-[#E47500] w-2/3 mx-auto">
-    </div>
-    <div class="text-center">
-      <img src="imagenes/iconoDesigualdad.png" alt="Desigualdad" class="w-14 h-14 mx-auto mb-4">
-      <p class="text-gray-700 text-sm">Reducción de la desigualdad económica y social.</p>
-      <hr class="mt-6 border-t-2 border-[#E47500] w-2/3 mx-auto">
-    </div>
-    <div class="text-center">
-      <img src="imagenes/iconoCondiciones.png" alt="Condiciones" class="w-14 h-14 mx-auto mb-4">
-      <p class="text-gray-700 text-sm">Mejora de las condiciones de vida de las comunidades de las becarias y becarios.</p>
-      <hr class="mt-6 border-t-2 border-[#E47500] w-2/3 mx-auto">
-    </div>
-    <div class="text-center">
-      <img src="imagenes/iconoIgualdad.png" alt="Igualdad" class="w-14 h-14 mx-auto mb-4">
-      <p class="text-gray-700 text-sm">Espacios de incidencia en la defensa de los derechos humanos, cambio social, política, medio ambiente, género.</p>
-      <hr class="mt-6 border-t-2 border-[#E47500] w-2/3 mx-auto">
-    </div>
-  </div>
- </div>
+</section>
 
 
 
-<footer class="bg-[#F05024] text-white py-12 mt-16">
-  <div class="max-w-7xl mx-auto px-2 grid grid-cols-1 md:grid-cols-[auto_1fr_1fr_1fr] gap-10 items-start">
+
+ <!-- FOOTER -->
+   <footer class="bg-[#002F6C] text-white py-12 mt-16">
+   <div class="max-w-7xl mx-auto px-2 grid grid-cols-1 md:grid-cols-[auto_1fr_1fr_1fr] gap-10 items-start">
     
     <!-- Logo completamente a la izquierda -->
     <div class="flex justify-start">
@@ -219,7 +211,7 @@
     <!-- Introducción -->
     <div class="flex flex-col justify-start">
       <p class="text-sm leading-relaxed">
-        El Programa de Becas ASONOG apoya a jóvenes líderes y desfavorecidos en Honduras, brindándoles acceso a educación, oportunidades y un futuro mejor.
+        El Programa de Becas ASONOG apoya a jóvenes agentes de cambio en Honduras, brindándoles acceso a educación, oportunidades y un futuro mejor.
       </p>
     </div>
 
@@ -252,7 +244,9 @@
   <div class="border-t border-white/30 mt-10 pt-6 text-center text-sm">
     &copy; 2025 Programa de Becas ASONOG. Todos los derechos reservados.
   </div>
-</footer>
+ </footer>
+  
+  
 
   <script>
     // Navbar scroll animation

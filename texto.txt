@@ -24,3 +24,29 @@
     <img src="imagenes/carrusel14.jpg" alt="Programa" class="rounded-lg shadow-lg">
   </div>
  </section>
+
+ Viejo carrusel de actividades:
+   <div class="relative w-full h-96">
+    <div class="swiper mySwiper h-full">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="imagenes/carrusel22.jpg" class="w-full h-full object-cover blur-sm brightness-75">
+        </div>
+        <div class="swiper-slide">
+          <img src="imagenes/carrusel12.jpg" class="w-full h-full object-cover blur-sm brightness-75">
+        </div>
+        <div class="swiper-slide">
+          <img src="imagenes/carrusel10.jpg" class="w-full h-full object-cover blur-sm brightness-75">
+        </div>
+      </div>
+    </div>
+    <div class="overlay-text text-4xl">ACTIVIDADES</div>
+  </div>
+  <script>
+    new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+      },
+    });
+  </script>
