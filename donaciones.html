@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Donaciones | Programa de Becas</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -37,11 +38,7 @@
   }
 
   .dark .bg-white {
-    background-color: #2d3748;
-  }
-
-  .dark .text-[F05024] {
-    color: #F05024;
+    background-color: #ffffff;
   }
 
   .dark .bg-gray-50 {
@@ -51,10 +48,6 @@
   .dark .text-gray-700,
   .dark .text-gray-600 {
     color: #e2e8f0;
-  }
-
-  .dark .navbar-scroll {
-    background-color: #c2410c !important;
   }
 
   .navbar-scroll {
@@ -199,27 +192,58 @@
   });
  </script>
 
-  <div class="container">
-    <div class="donation-header">
-      <img src="imagenes/logoasonog.png" alt="Donar">
-      <h1>Apoya Nuestro Programa de Becas</h1>
-      <p>
-        Con tu ayuda, podemos seguir cambiando vidas a través de la educación. Cada donación, grande o pequeña, tiene un impacto directo en jóvenes con talento que necesitan una oportunidad. ¡Gracias por tu generosidad!
+  <!-- SECCIÓN DE DONACIONES -->
+ <section class="relative bg-gradient-to-br from-[#002F6C] via-[#004c9d] to-[#0077ff] py-16 px-6 overflow-hidden">
+  
+  <!-- Fondo animado -->
+  <div class="absolute inset-0 opacity-20">
+    <lottie-player 
+      src="https://assets6.lottiefiles.com/packages/lf20_puciaact.json"  
+      background="transparent"  
+      speed="1"  
+      loop  
+      autoplay>
+    </lottie-player>
+  </div>
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+    
+    <!-- Texto e imagen -->
+    <div class="text-white space-y-6 animate__animated animate__fadeInLeft">
+      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Cambia una vida hoy<br>
+        <span class="text-[#F8B400]">¡Haz tu donación!</span>
+      </h2>
+      <p class="text-lg opacity-90">
+        Cada aporte, grande o pequeño, transforma el futuro de jóvenes talentosos que necesitan una oportunidad. 
+        Con tu ayuda, brindamos educación, esperanza y oportunidades.
       </p>
+
+      <ul class="space-y-3 text-white/90">
+        <li class="flex items-center"><i class="fas fa-check-circle text-[#F8B400] mr-3"></i>Donaciones 100% seguras y rápidas</li>
+        <li class="flex items-center"><i class="fas fa-check-circle text-[#F8B400] mr-3"></i>Impacto real y comprobable</li>
+        <li class="flex items-center"><i class="fas fa-check-circle text-[#F8B400] mr-3"></i>Recibe actualizaciones de tu aporte</li>
+      </ul>
+
+      <img src="imagenes/logoasonog.png" alt="ASONOG" class="w-32 mt-6 drop-shadow-lg">
     </div>
 
-    <div class="donorbox-wrapper">
+    <!-- Formulario Donorbox -->
+    <div class="bg-white rounded-2xl shadow-2xl p-6 transform hover:scale-[1.02] transition duration-500 animate__animated animate__fadeInRight">
       <script src="https://donorbox.org/widget.js" paypalExpress="true"></script>
       <iframe src="https://donorbox.org/embed/donaciones-794518?" name="donorbox"
         allowpaymentrequest="allowpaymentrequest" seamless="seamless"
         scrolling="no" height="900px" width="100%"
-        style="max-width: 500px; min-width: 250px; max-height:none!important" allow="payment">
+        style="max-width: 100%; min-width: 250px; max-height:none!important; border-radius: 12px;" 
+        allow="payment">
       </iframe>
     </div>
-  </div>
 
-    <!-- FOOTER -->
-   <footer class="bg-[#002F6C] text-white py-12 mt-16">
+  </div>
+ </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#002F6C] text-white py-12 mt-16">
   <div class="max-w-7xl mx-auto px-2 grid grid-cols-1 md:grid-cols-[auto_1fr_1fr_1fr] gap-10 items-start">
     
     <!-- Logo completamente a la izquierda -->
@@ -284,20 +308,6 @@
         icon.classList.replace('fa-moon', 'fa-sun');
       } else {
         icon.classList.replace('fa-sun', 'fa-moon');
-      }
-    }
-    function agregarVideo() {
-      const link = document.getElementById('youtube-link').value;
-      const match = link.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]{11})/);
-      if (match) {
-        const embedLink = `https://www.youtube.com/embed/${match[1]}`;
-        const div = document.createElement('div');
-        div.className = 'card';
-        div.innerHTML = `<iframe src="${embedLink}" frameborder="0" allowfullscreen></iframe>`;
-        document.getElementById('youtube-videos').appendChild(div);
-        document.getElementById('youtube-link').value = '';
-      } else {
-        alert('Enlace no válido');
       }
     }
   </script>

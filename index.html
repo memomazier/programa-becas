@@ -10,6 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
@@ -136,6 +137,8 @@
       text-align: center;
       margin-bottom: 40px;
     }
+        /* Hover tarjetas */
+    .card-hover:hover { transform: translateY(-5px) scale(1.03); box-shadow: 0 10px 25px rgba(0,0,0,0.15); transition: all 0.3s ease; }
   </style>
 </head>
 <body class="bg-gray-100">
@@ -239,45 +242,53 @@
 
 
 
-    <!-- NUESTRA POBLACIÓN META -->
-    <section class="py-16 px-6 bg-gray-100">
-      <h2 class="text-2xl font-bold text-[#002F6C] mb-10 text-center">Grupo Meta</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="bg-white p-6 rounded-lg shadow text-center font-bold">
-          <img src="imagenes/checkmorado.png" alt="Población 1" class="w-8 h-8 mx-auto mb-4">
-          <p>Madres solteras</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center font-bold">
-          <img src="imagenes/checkmorado.png" alt="Población 2" class="w-8 h-8 mx-auto mb-4">
-          <p>Mujeres víctimas de violencia</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center font-bold">
-          <img src="imagenes/checkmorado.png" alt="Población 3" class="w-8 h-8 mx-auto mb-4">
-          <p>Jóvenes vulnerables</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center font-bold">
-          <img src="imagenes/checkmorado.png" alt="Población 4" class="w-8 h-8 mx-auto mb-4">
-          <p>Jóvenes migrantes</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center font-bold">
-          <img src="imagenes/checkmorado.png" alt="Población 5" class="w-8 h-8 mx-auto mb-4">
-          <p>Desplazados internos</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center font-bold">
-          <img src="imagenes/checkmorado.png" alt="Población 6" class="w-8 h-8 mx-auto mb-4">
-          <p>Afrodescendientes</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center font-bold">
-          <img src="imagenes/checkmorado.png" alt="Población 7" class="w-8 h-8 mx-auto mb-4">
-          <p>Personas con discapacidad</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center font-bold">
-          <img src="imagenes/checkmorado.png" alt="Población 9" class="w-8 h-8 mx-auto mb-4">
-          <p>Otros</p>
-        </div>
+<!-- GRUPO META -->
+<section class="py-16 px-6 bg-gray-100 fade-up">
+  <h2 class="text-2xl font-bold text-[#002F6C] mb-10 text-center">Grupo Meta</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
-      </div>
-    </section>
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Madres solteras
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Mujeres víctimas de violencia
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Jóvenes vulnerables
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Jóvenes migrantes
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Desplazados internos
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Afrodescendientes
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Personas con discapacidad
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Otros
+    </div>
+
+  </div>
+</section>
 
   <!-- MAPA -->
   <section class="py-16 px-6 bg-gray-100 text-center">
@@ -399,28 +410,24 @@
   
   
 
-  <script>
-    // Navbar scroll animation
-    window.addEventListener('scroll', () => {
-      const navbar = document.getElementById('navbar');
-      if (window.scrollY > 10) {
-        navbar.classList.add('shadow-lg');
-      } else {
-        navbar.classList.remove('shadow-lg');
-      }
-    });
-  
-    // Modo oscuro
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-      const icon = document.getElementById('darkIcon');
-      if (document.body.classList.contains('dark')) {
-        icon.classList.replace('fa-moon', 'fa-sun');
-      } else {
-        icon.classList.replace('fa-sun', 'fa-moon');
-      }
-    }
-  </script>
+<script>
+  // Swiper config
+  new Swiper('.swiper', { loop: true, autoplay: { delay: 3000 }, pagination: { el: '.swiper-pagination', clickable: true } });
+
+  // Animaciones al hacer scroll
+  const elements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  elements.forEach(el => observer.observe(el));
+
+  // Navbar shadow
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 10) navbar.classList.add('shadow-lg');
+    else navbar.classList.remove('shadow-lg');
+  });
+</script>
 
 </body>
 </html>

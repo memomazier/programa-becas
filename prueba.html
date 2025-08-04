@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unidad de Becas ASONOG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Animaciones de entrada */
+    .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+    .fade-left { opacity: 0; transform: translateX(-30px); transition: all 0.8s ease; }
+    .fade-right { opacity: 0; transform: translateX(30px); transition: all 0.8s ease; }
+    .visible { opacity: 1; transform: translate(0); }
+
+    /* Hover tarjetas */
+    .card-hover:hover { transform: translateY(-5px) scale(1.03); box-shadow: 0 10px 25px rgba(0,0,0,0.15); transition: all 0.3s ease; }
+
+    /* Botones con efecto */
+    .btn-anim:hover { transform: scale(1.05); transition: transform 0.3s ease; }
+
+    /* Imagen con zoom */
+    .img-hover:hover { transform: scale(1.05); transition: transform 0.4s ease; }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="bg-[#002F6C] text-white px-8 py-5 shadow-md flex items-center justify-between sticky top-0 z-50 transition-all duration-300">
+  <div class="flex items-center space-x-10">
+    <a href="index.html" class="font-bold group relative">INICIO
+      <span class="absolute bottom-[-5px] left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
+    </a>
+    <a href="actividades.html" class="font-bold group relative">ACTIVIDADES
+      <span class="absolute bottom-[-5px] left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
+    </a>
+    <a href="Historiasdeexito.html" class="font-bold group relative">HISTORIAS DE ÉXITO
+      <span class="absolute bottom-[-5px] left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
+    </a>
+  </div>
+  <div class="space-x-4">
+    <a href="donaciones.html" class="bg-white text-[#002F6C] px-5 py-2 rounded-full font-bold btn-anim">DONAR</a>
+    <a href="ingresar.html" class="bg-white text-[#002F6C] px-5 py-2 rounded-full font-bold btn-anim">INGRESAR</a>
+  </div>
+</nav>
+
+<!-- CARRUSEL -->
+<div class="relative w-full h-[500px] fade-up">
+  <div class="absolute bottom-6 w-full text-center z-10">
+    <div class="text-white font-extrabold text-4xl px-4 py-2 inline-block rounded-lg bg-gray-700 bg-opacity-50">
+      UNIDAD DE BECAS ASONOG
+    </div>
+  </div>
+  <div class="swiper h-full">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="imagenes/carrusel3.jpg" class="w-full h-full object-cover"></div>
+      <div class="swiper-slide"><img src="imagenes/carrusel15.jpg" class="w-full h-full object-cover"></div>
+      <div class="swiper-slide"><img src="imagenes/carrusel4.jpeg" class="w-full h-full object-cover"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<!-- PROGRAMA DE BECAS -->
+<section class="py-16 px-6 bg-white flex flex-col lg:flex-row items-center fade-up">
+  <div class="lg:w-1/2">
+    <h2 class="text-3xl text-center font-bold mb-4 text-[#002F6C]">UNIDAD DE BECAS ASONOG</h2> 
+    <p class="mb-4 text-center text-lg leading-relaxed">El programa de becas de ASONOG...</p>
+    <div class="flex items-center justify-center mt-6 space-x-4">
+      <p class="text-xl font-semibold">¿Eres becaria o becario?</p>
+      <button class="text-lg font-bold text-white bg-[#002F6C] px-5 py-2 rounded btn-anim">Ingresa ya</button>
+    </div>
+  </div>
+  <div class="lg:w-1/2 mt-5 flex justify-end">
+    <img src="imagenes/carrusel14.jpg" class="rounded-lg shadow-lg max-w-xs img-hover">
+  </div>
+</section>
+
+<!-- GRUPO META -->
+<section class="py-16 px-6 bg-gray-100 fade-up">
+  <h2 class="text-2xl font-bold text-[#002F6C] mb-10 text-center">Grupo Meta</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Madres solteras
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Mujeres víctimas de violencia
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Jóvenes vulnerables
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Jóvenes migrantes
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Desplazados internos
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Afrodescendientes
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Personas con discapacidad
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow text-center font-bold card-hover">
+      <img src="imagenes/checkmorado.png" alt="Icono" class="w-10 h-10 mx-auto mb-4">
+      Afrodescendientes
+    </div>
+
+  </div>
+</section>
+
+
+<!-- DONACIÓN -->
+<section class="py-16 px-6 bg-[#002F6C] text-white fade-up">
+  <div class="text-center mb-8">
+    <h2 class="text-4xl font-bold mb-6">¡Apoya nuestra causa!</h2>
+    <p class="mb-6 text-lg leading-relaxed">Juntos podemos transformar vidas...</p>
+  </div>
+  <div class="text-center">
+    <a href="donaciones.html" class="bg-white text-[#002F6C] px-6 py-3 rounded-full font-bold btn-anim">DONAR AHORA</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#002F6C] text-white py-12 mt-16 fade-up">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div><img src="imagenes/logoasonog.png" class="h-24"></div>
+    <div><p class="text-sm leading-relaxed">El Programa de Becas ASONOG apoya...</p></div>
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Contáctanos</h3>
+      <p class="text-sm mb-2">Santa Rosa de Copán, Honduras.</p>
+      <p class="text-sm mb-2">+504 2662-2626</p>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Síguenos:</h3>
+      <div class="flex gap-4 text-2xl">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Swiper config
+  new Swiper('.swiper', { loop: true, autoplay: { delay: 3000 }, pagination: { el: '.swiper-pagination', clickable: true } });
+
+  // Animaciones al hacer scroll
+  const elements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  elements.forEach(el => observer.observe(el));
+
+  // Navbar shadow
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 10) navbar.classList.add('shadow-lg');
+    else navbar.classList.remove('shadow-lg');
+  });
+</script>
+
+</body>
+</html>
