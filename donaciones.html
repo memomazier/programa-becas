@@ -228,16 +228,21 @@
       <img src="imagenes/logoasonog.png" alt="ASONOG" class="w-32 mt-6 drop-shadow-lg">
     </div>
 
-    <!-- Formulario Donorbox -->
-    <div class="bg-white rounded-2xl shadow-2xl p-6 transform hover:scale-[1.02] transition duration-500 animate__animated animate__fadeInRight">
-      <script src="https://donorbox.org/widget.js" paypalExpress="true"></script>
-      <iframe src="https://donorbox.org/embed/donaciones-794518?" name="donorbox"
-        allowpaymentrequest="allowpaymentrequest" seamless="seamless"
-        scrolling="no" height="900px" width="100%"
-        style="max-width: 100%; min-width: 250px; max-height:none!important; border-radius: 12px;" 
-        allow="payment">
-      </iframe>
-    </div>
+  <!-- Contenedor con centrado interno y tamaño reducido -->
+<div class="bg-white rounded-2xl shadow-2xl p-4 flex justify-center max-w-lg mx-auto animate__animated animate__fadeInRight">
+  <script src="https://donorbox.org/widget.js" paypalExpress="true"></script>
+  <iframe 
+    src="https://donorbox.org/embed/donaciones-794518?" 
+    name="donorbox"
+    allowpaymentrequest="allowpaymentrequest" 
+    seamless="seamless"
+    scrolling="no" 
+    style="width: 420px; height: 700px; border-radius: 12px; border: none;"
+    allow="payment">
+  </iframe>
+</div>
+
+
 
   </div>
  </section>
